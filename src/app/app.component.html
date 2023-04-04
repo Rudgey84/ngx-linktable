@@ -5,4 +5,20 @@
   [rows]="rows"
   [columns]="columns"
   (select)="select($event)">
+
+  <ngx-datatable-column
+  [width]="40"
+  [sortable]="false"
+  [draggable]="false"
+  [resizeable]="false"
+  [canAutoResize]="false"
+  [headerCheckboxable]="true"
+  [checkboxable]="true" headerClass="text-center" cellClass="text-center">
+</ngx-datatable-column>
+
+  <ngx-datatable-column name="Link">
+    <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+      {{ row.typeName}}: {{ row.role }}
+    </ng-template>
+  </ngx-datatable-column>
 </ngx-datatable>
