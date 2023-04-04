@@ -4,11 +4,11 @@
   [selectionType]="type"
   [rows]="rows"
   [columns]="columns"
+  columnMode="force"
   (select)="select($event)">
 
   <ngx-datatable-column
   [width]="40"
-  [sortable]="false"
   [draggable]="false"
   [resizeable]="false"
   [canAutoResize]="false"

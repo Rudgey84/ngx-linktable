@@ -15,7 +15,7 @@ export class AppComponent {
       typeName: 'Criminal',
       dateCreated: '2011-08-12T20:17:46.384Z',
       dateLastChanged: '2011-08-12T20:17:46.384Z',
-      role: 'Dealer',
+      role: 'top of the listsssssss sdsds',
       targetEntityId: '5678',
       targetEntityType: 'Person',
       label: 'Criminal (Dealer)',
