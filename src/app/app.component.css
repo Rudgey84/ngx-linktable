@@ -1,3 +1,6 @@
 p {
   font-family: Lato;
 }
+:host ::ng-deep .ngx-datatable .datatable-header {
+  background-color: lightgrey;
+}

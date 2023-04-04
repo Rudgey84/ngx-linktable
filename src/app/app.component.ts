@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import {SelectionType} from '@swimlane/ngx-datatable';
+import { SelectionType } from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
+export class AppComponent {
   // needed to fire the select event when a checkbox is activated.
-  type = SelectionType.checkbox
+  type = SelectionType.checkbox;
 
-  rows = [
+  data = [
     {
       typeName: 'Criminal',
       dateCreated: '2011-08-12T20:17:46.384Z',
@@ -28,8 +28,10 @@ export class AppComponent  {
       targetEntityId: '1234',
       targetEntityType: 'Person',
       label: 'Family Cousin',
-    }
-  ]
+    },
+  ];
+
+  rows = this.data;
 
   select(event) {
     console.log(event);
