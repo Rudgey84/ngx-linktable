@@ -12,7 +12,7 @@
     [draggable]="false"
     [resizeable]="false"
     [canAutoResize]="false"
-    [headerCheckboxable]="true"
+    [headerCheckboxable]="false"
     [checkboxable]="true"
     headerClass="text-center"
     cellClass="text-center"
@@ -27,6 +27,10 @@
       let-row="row"
     >
       {{ row.typeName }}: {{ row.role }}
+      <span>
+        <button class="optionButton" type="button" data-toggle="modal" data- 
+target="#addOption">Reserve Product</button>
+     </span>
     </ng-template>
   </ngx-datatable-column>
 </ngx-datatable>
