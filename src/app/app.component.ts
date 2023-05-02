@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   // needed to fire the select event when a checkbox is activated.
   readonly type = SelectionType.checkbox;
   public rows;
+  public headerCheckboxable: boolean = false;
   public data = [
     {
       typeName: 'Criminal',
@@ -36,14 +37,18 @@ export class AppComponent implements OnInit {
   }
 
   private orderByDate(arr: any[]): any[] {
-		return arr.sort((b, a) => {
-			const dateA = new Date(a.dateLastChanged);
-			const dateB = new Date(b.dateLastChanged);
-			return dateA.getTime() - dateB.getTime();
-		});
-	}
+    return arr.sort((b, a) => {
+      const dateA = new Date(a.dateLastChanged);
+      const dateB = new Date(b.dateLastChanged);
+      return dateA.getTime() - dateB.getTime();
+    });
+  }
 
   ngOnInit(): void {
     this.rows = this.orderByDate(this.data);
+  debugger
+    if (this.rows.length > 1) {
+      this.headerCheckboxable = true;
+    }
   }
 }

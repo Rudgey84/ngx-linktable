@@ -12,14 +12,14 @@
     [draggable]="false"
     [resizeable]="false"
     [canAutoResize]="false"
-    [headerCheckboxable]="false"
+    [headerCheckboxable]="headerCheckboxable"
     [checkboxable]="true"
     headerClass="text-center"
     cellClass="text-center"
   >
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Link">
+  <ngx-datatable-column [name]="headerCheckboxable ? 'Link (select all)' : 'Link'">
     <ng-template
       ngx-datatable-cell-template
       let-rowIndex="rowIndex"
