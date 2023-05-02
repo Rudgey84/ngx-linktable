@@ -46,7 +46,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.rows = this.orderByDate(this.data);
-  debugger
     if (this.rows.length > 1) {
       this.headerCheckboxable = true;
     }
